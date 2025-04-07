@@ -1,0 +1,29 @@
+openapi:
+  title: firstproject API
+  version: 1.0.0
+  description: API gerada automaticamente pelo Vaden.
+  enable: true
+
+sqlite:
+  create_if_missing: true
+  database_path: database.db
+server:
+  port: 8080
+  host: localhost
+
+storage:
+  provider: local  # opções: local, s3, firebase
+  local:
+    folder: './uploads'
+  s3:
+    bucket: 'meu-bucket'
+    region: 'us-east-1'
+    accessKey: 'sua_access_key'
+    secretKey: 'seu_secret_key'
+  firebase:
+    projectId: 'my-project'
+    apiKey: 'my_api'
+
+env:
+  base_url: http://localhost
+  mode: debug
